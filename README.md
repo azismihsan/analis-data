@@ -1,4 +1,4 @@
-# import library
+# Import library
 ```shell
 pip install streamlit
 pip install -r requirements.txt
