@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-sns.set(style='dark')
+
 
 def get_total_count_by_hour_df(hour_df):
     hour_count_df = hour_df.groupby(by="hours").agg({"count_cr": ["sum"]})
