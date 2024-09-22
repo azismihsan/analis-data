@@ -106,14 +106,14 @@ st.subheader("At what times are the most and least rented?")
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
 
 sns.barplot(x="hours", y="count_cr", data=sum_order_items_df.head(5), 
-            palette=["#D3D3D3", "#D3D3D3", "#90CAF9", "#D3D3D3", "#D3D3D3"], ax=ax[0])
+            palette=["#B17457", "#B17457", "#90CAF9", "#B17457", "#B17457"], ax=ax[0])
 ax[0].set_xlabel("Hours (PM)", fontsize=30)
 ax[0].set_title("Hours with many bike renters", loc="center", fontsize=30)
 ax[0].tick_params(axis='y', labelsize=35)
 ax[0].tick_params(axis='x', labelsize=30)
 
 sns.barplot(x="hours", y="count_cr", data=sum_order_items_df.sort_values(by="hours", ascending=True).head(5),
-            palette=["#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#90CAF9"], ax=ax[1])
+            palette=["#B17457", "#B17457", "#B17457", "#B17457", "#90CAF9"], ax=ax[1])
 ax[1].set_xlabel("Hours (AM)", fontsize=30)
 ax[1].set_title("Hours with few bike renters", loc="center", fontsize=30)
 ax[1].invert_xaxis()
@@ -125,7 +125,7 @@ plt.close()  # Close plot
 
 # Seasonal Rent Visualization
 st.subheader("What is the most rented season?")
-colors = ["#D3D3D3", "#D3D3D3", "#D3D3D3", "#90CAF9"]
+colors = ["#B17457", "#B17457", "#B17457", "#90CAF9"]
 fig, ax = plt.subplots(figsize=(20, 10))
 sns.barplot(y="count_cr", x="season", data=season_df.sort_values(by="season", ascending=False), palette=colors, ax=ax)
 ax.set_title("Inter-seasonal Chart", loc="center", fontsize=50)
@@ -141,7 +141,7 @@ sizes = [18.8, 81.2]
 explode = (0, 0.1)
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
-        colors=["#D3D3D3", "#90CAF9"], shadow=True, startangle=90)
+        colors=["#B17457", "#90CAF9"], shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig1)
 plt.close()  # Close plot
