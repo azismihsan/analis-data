@@ -128,7 +128,7 @@ st.subheader("What is the most rented season?")
 colors = ["#D3D3D3", "#D3D3D3", "#D3D3D3", "#90CAF9"]
 fig, ax = plt.subplots(figsize=(20, 10))
 sns.barplot(y="count_cr", x="season", data=season_df.sort_values(by="season", ascending=False), palette=colors, ax=ax)
-ax.set_title("Grafik Antar Musim", loc="center", fontsize=50)
+ax.set_title("Inter-seasonal Chart", loc="center", fontsize=50)
 ax.tick_params(axis='x', labelsize=35)
 ax.tick_params(axis='y', labelsize=30)
 st.pyplot(fig)
