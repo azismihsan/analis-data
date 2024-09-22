@@ -1,5 +1,8 @@
-# analis-data
-
+# import library
+```shell
+pip install streamlit
+pip install -r requirements.txt
+```
 
 # Usage
 1. Enter the project directory (Local):
